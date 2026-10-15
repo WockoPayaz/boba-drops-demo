@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba Drops Workshop</title>
+
+    <style>
+        :root {
+            --primary: #4a2e18;
+            --accent: #d06d4e;
+            --bg-color: #fcf8f2;
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --border-radius: 12px;
+            --transition-speed: 0.3s ease;
+        }
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe ui", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1{
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .join-button {
+            background-color: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: var(--transition-speed);
+            box-shadow: 0 4px 10px rgba(208, 109, 78, 0.3);
+        }
+
+        .join-button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            flex: 1;
+            width: 100%;
+        }
+
+        .banner-container {
+            width: 100%;
+            height: 320px;
+            background-color: #e5dad0;
+            border: 2px dashed var(--accent);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+            color: #775a46;
+        }
+
+        .banner-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .detail-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(74, 46, 24, 0.05);
+            transition: var(--transition-speed);
+            border-left: 5px solid var(--accent);
+            border-right: 5px solid var(--accent);
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(74, 46, 24, 0.1);
+        }
+
+        .detail-card h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .detail-card p {
+            color: #555;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #fcf8f2;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #e5dad0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition-speed);
+        }
+
+        .footer-links a:hover{
+            color: var(--accent);
+        }
+
+        .footer-end {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            color: #d1c2b5;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .banner-container {
+                height: 220px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Boba Drops Workshop</h1>
+        <p>Learn web design using HTML and CSS and build a project from scratch!!!</p>
+        <a href="https://www.hackistan.club/#join" class="join-button" target="_blank">Join the Workshop</a>
+    </header>
+
+    <main>
+        <div class="banner-container">
+            <img src="https://www.hackistan.club/images/boba-drops.webp" alt="Boba Drops Banner">
+        </div>
+
+    
+        <div class="details-grid">
+            <div class="detail-card">
+                <h3>Location:</h3>
+                <p>The City School Quetta Campus<br><small style="color:#775a46; font-weight:normal;">ICT Lab</small></p>
+            </div>
+            <div class="detail-card">
+                <h3>Date:</h3>
+                <p>Monday, 19 October</p>
+            </div>
+            <div class="detail-card">
+                <h3>Time:</h3>
+                <p>1:30 PM - 2:30 PM</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                Boba Drops x Hackistan
+            </div>
+            <ul class="footer-links">
+                <li><a href="https://www.hackistan.club/" target="_blank">Hackistan Club</a></li>
+                <li><a href="https://www.hackistan.club/#join" target="_blank">Register</a></li>
+            </ul>
+        </div>
+        <div class="footer-end">
+            Boba Drops Workshop demo website 
+        </div>
+    </footer>
+
+</body>
+</html>
